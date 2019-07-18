@@ -1,0 +1,21 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'articles.scss';
+@import "font-awesome";
+
+body{
+    background-color: #f0fff0;
+}
+#cover-image{
+    cursor: pointer;
+}
+.relative{
+    position: relative;
+
+    i{
+        position: absolute; 
+        top: 40px;
+        left: 2%;
+        font-size: 60px;
+    }
+}

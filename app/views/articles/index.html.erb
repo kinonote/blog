@@ -1,23 +1,23 @@
 <div class="container">
-<div class="row">
-    <% @articles.each do |article| %>
-        <%= link_to article do %>
-            <div class="col-md-3 top-articles bg-white">
-            <% if article.image_id.present? %>
-            <%= image_tag attachment_url(article,:image),class:'img-fluid index-list-img' %>
-            <% else %>
-            <%= image_tag 'blog-top.jpg',class:'img-fluid index-list-img' %>
-            <% end %>
-                <div class="padding-bottom">
-                    <p class="title"><%= article.title %></p>
-                    <span>
-                        <%= article.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
-                    </span>
+    <div class="row">
+        <% @articles.each do |article| %>
+            <%= link_to article do %>
+                <div class="col-md-3 top-articles bg-white">
+                    <% if article.image_id.present? %>
+                        <%= image_tag attachment_url(article,:image),class:'img-fluid index-list-img' %>
+                    <% else %>
+                        <%= image_tag 'blog-top.jpg',class:'img-fluid index-list-img' %>
+                    <% end %>
+                    <div class="padding-bottom">
+                        <p class="title"><%= article.title %></p>
+                            <span>
+                                <%= article.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
+                            </span>
+                    </div>
                 </div>
-            </div>
+            <% end %>
         <% end %>
-    <% end %>
-</div>
+    </div>
     <div class="row">
         <%= link_to '新規作成', new_article_path,class:'create-top btn btn-primary' %>
     </div>

@@ -1,16 +1,14 @@
 <%= form_for article do |f| %>
-<div id="cover-image" class="form-group title-form relative">
+<div id="cover-image" class="form-group title-form relative ">
 <% if article.image_id.present? %>
-    <%= image_tag attachment_url(article,:image),class:'article-img' %>
+    <%= image_tag attachment_url(article,:image),class:' article-img' %>
     <% else %>
     <%= image_tag 'blog-top.jpg',class:'article-img' %>
     <% end %>
     <i class="fa fa-camera" aria-hidden="true"></i>
 </div>
-
-    <div class="form-group title-form">
         <%= f.attachment_field :image %>
-    </div>
+    
     <div class="form-group title-form">
     <%= f.label :title,'タイトル'%>
         <%= f.text_field :title,class:"form-control" %>
@@ -19,5 +17,5 @@
     <%= f.label :body,'本文'%>
         <%= f.text_area :body,rows: 10,class:"form-control" %>
     </div>
-    <%= f.submit'新規作成' ,class: 'btn btn-success' %>
+    <%= f.submit'日記作成' ,class: 'btn btn-success' %>
 <% end %>

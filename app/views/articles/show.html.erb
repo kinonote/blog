@@ -1,7 +1,7 @@
 <div class="container">
     <div class="col-md-12 top-articles bg-white">
         <% if @article.image_id.present? %>
-            <%= image_tag attachment_url(@article, :image),class:'articite-image top-articles'%>
+            <%= image_tag attachment_url(@article, :image),class:'articite-image article-img top-articles img-responsive'%>
         <% else %>
         <%= image_tag 'blog-top.jpg',class:'img-fluid article-list-img' %>
             <% end %>
